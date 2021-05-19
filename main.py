@@ -11,3 +11,10 @@ atbilde = requests.get(URL, parametri)
 js = atbilde.json()
 print(js)
 print()
+
+temp = js['current']['temperature']
+datums = js['location']['localtime']
+pilsetaa =js['location']['name']
+valsts = js['location']['country']
+
+print(f"Temperatūra {pilsetaa}, {valsts}. {datums} ir {temp} grādi pēc celsija.")
